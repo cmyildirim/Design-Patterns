@@ -9,6 +9,13 @@ namespace Design_Patterns
     {
         public static void Main(string[] args)
         {
+            IPatternImplementation patternImplementation = new StrategyPattern.StrategyPattern();
+            patternImplementation.Run();
         }
+    }
+
+    public interface IPatternImplementation
+    {
+        void Run();
     }
 }
