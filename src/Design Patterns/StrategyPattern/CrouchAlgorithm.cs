@@ -2,11 +2,11 @@
 
 namespace Design_Patterns.StrategyPattern
 {
-    public class Standing : IMoveAlgorithm
+    public class CrouchAlgorithm : IMoveAlgorithm
     {
         public void Go()
         {
-            Console.WriteLine("Standing Go: Running");
+            Console.WriteLine("Crouching Go: Moving slowly");
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Design_Patterns.StrategyPattern
 {
-    public class Prone : IMoveAlgorithm
+    public class ProneAlgorithm : IMoveAlgorithm
     {
         public void Go()
         {

@@ -7,11 +7,11 @@ namespace Design_Patterns.StrategyPattern
         public void Run()
         {
             Hero legendaryHero = new Snake();
-            legendaryHero.SetMoveStrategy(new Standing());
+            legendaryHero.SetMoveStrategy(new StandAlgorithm());
             legendaryHero.Move();
-            legendaryHero.SetMoveStrategy(new Crouching());
+            legendaryHero.SetMoveStrategy(new CrouchAlgorithm());
             legendaryHero.Move();
-            legendaryHero.SetMoveStrategy(new Prone());
+            legendaryHero.SetMoveStrategy(new ProneAlgorithm());
             legendaryHero.Move();
         }
     }
