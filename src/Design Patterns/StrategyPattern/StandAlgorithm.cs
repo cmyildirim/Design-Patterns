@@ -6,7 +6,7 @@ namespace Design_Patterns.StrategyPattern
     {
         public void Go()
         {
-            Console.WriteLine("Standing Go: Running");
+            Console.WriteLine("Running");
         }
     }
 }

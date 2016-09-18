@@ -6,7 +6,7 @@ namespace Design_Patterns.StrategyPattern
     {
         public void Go()
         {
-            Console.WriteLine("Crouching Go: Moving slowly");
+            Console.WriteLine("Moving slowly");
         }
     }
 }
