@@ -8,7 +8,14 @@ namespace Design_Patterns
         {
             IPatternImplementation patternImplementation = new StrategyPattern.StrategyPattern();
             RunAndPrintStrategy(patternImplementation);
+
             patternImplementation = new DecoratorPattern.DecoratorPattern();
+            RunAndPrintStrategy(patternImplementation);
+
+            patternImplementation = new FactoryPattern.FactoryPattern();
+            RunAndPrintStrategy(patternImplementation);
+
+            patternImplementation = new ObserverPattern.ObserverPattern();
             RunAndPrintStrategy(patternImplementation);
         }
 
