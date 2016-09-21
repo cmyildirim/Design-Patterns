@@ -5,20 +5,15 @@ namespace Design_Patterns.FactoryPattern
     /// <summary>
     /// The 'Creator' abstract class
     /// </summary>
-    abstract class Dokuman
+    internal abstract class Dokuman
     {
-        private List<Page> _pages = new List<Page>();
-
         // Constructor calls abstract Factory method
-        public Dokuman()
+        protected Dokuman()
         {
-            this.CreatePages();
+            CreatePages();
         }
 
-        public List<Page> Pages
-        {
-            get { return _pages; }
-        }
+        public List<Page> Pages { get; } = new List<Page>();
 
         // Factory Method
         public abstract void CreatePages();

@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System;
+using static System.Console;
 
 namespace Design_Patterns
 {
@@ -22,7 +23,16 @@ namespace Design_Patterns
         private static void RunAndPrintStrategy(IPatternImplementation patternImplementation)
         {
             WriteLine("****" + patternImplementation.GetType().Name + "****");
-            patternImplementation.Run();
+            try
+            {
+                patternImplementation.Run();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\n!!!ERROR!!! in implementation!");
+                Console.WriteLine(ex.Message + "\n");
+            }
+            
             PrintSeparator();
         }
 
