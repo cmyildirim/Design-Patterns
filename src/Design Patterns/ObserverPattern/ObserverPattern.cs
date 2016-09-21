@@ -1,4 +1,7 @@
-﻿namespace Design_Patterns.ObserverPattern
+﻿using System;
+using Design_Patterns.ObserverPattern.DotNetImplementation;
+
+namespace Design_Patterns.ObserverPattern
 {
     public class ObserverPattern : IPatternImplementation
     {
@@ -14,6 +17,9 @@
             subject.SubjectState = "ABC";
             subject.UnRegisterObservers(observer1, observer3);
             subject.SubjectState = "XYZ";
+
+            Console.WriteLine("\nImplementation using .NET IObserver and IObservable");
+            NetObserver.Run();
         }
     }
 }

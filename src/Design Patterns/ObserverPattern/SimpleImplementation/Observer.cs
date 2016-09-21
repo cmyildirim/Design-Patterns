@@ -1,6 +1,6 @@
 ﻿namespace Design_Patterns.ObserverPattern
 {
-    public abstract class Observer
+    internal abstract class Observer
     {
         protected string Name { get; set; }
         protected string ObserverState { get; set; }

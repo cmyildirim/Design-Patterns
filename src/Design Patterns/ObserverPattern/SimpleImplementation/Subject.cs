@@ -1,19 +1,20 @@
 ﻿using System.Collections.Generic;
 
-namespace Design_Patterns.ObserverPattern
+namespace Design_Patterns.ObserverPattern.SimpleImplementation
 {
     public abstract class Subject
     {
         private readonly List<Observer> _observers = new List<Observer>();
-        public void RegisterObservers(params Observer[] observers)
+        internal void RegisterObservers(params Observer[] observers)
         {
             foreach (var observer in observers)
             {
-                _observers.Add(observer);
+                if (!_observers.Contains(observer))
+                    _observers.Add(observer);
             }
         }
 
-        public void UnRegisterObservers(params Observer[] observers)
+        internal void UnRegisterObservers(params Observer[] observers)
         {
             foreach (var observer in observers)
             {
@@ -23,7 +24,7 @@ namespace Design_Patterns.ObserverPattern
 
         public void Notify()
         {
-            foreach (Observer o in _observers)
+            foreach (var o in _observers)
             {
                 o.Update();
             }

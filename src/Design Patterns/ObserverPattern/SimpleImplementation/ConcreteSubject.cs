@@ -1,6 +1,8 @@
-﻿namespace Design_Patterns.ObserverPattern
+﻿using Design_Patterns.ObserverPattern.SimpleImplementation;
+
+namespace Design_Patterns.ObserverPattern
 {
-    public class ConcreteSubject : Subject
+    internal class ConcreteSubject : Subject
     {
         private string _subjectState;
 

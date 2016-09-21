@@ -7,30 +7,27 @@ namespace Design_Patterns
     {
         public static void Main(string[] args)
         {
-            IPatternImplementation patternImplementation = new StrategyPattern.StrategyPattern();
-            RunAndPrintStrategy(patternImplementation);
-
-            patternImplementation = new DecoratorPattern.DecoratorPattern();
-            RunAndPrintStrategy(patternImplementation);
-
-            patternImplementation = new FactoryPattern.FactoryPattern();
-            RunAndPrintStrategy(patternImplementation);
-
-            patternImplementation = new ObserverPattern.ObserverPattern();
-            RunAndPrintStrategy(patternImplementation);
+            RunAndPrintStrategy(typeof(StrategyPattern.StrategyPattern));
+            RunAndPrintStrategy(typeof(DecoratorPattern.DecoratorPattern));
+            RunAndPrintStrategy(typeof(FactoryPattern.FactoryPattern));
+            RunAndPrintStrategy(typeof(ObserverPattern.ObserverPattern));
+            RunAndPrintStrategy(typeof(ChainOfResponsibility.ChainOfResponsibility));
         }
 
-        private static void RunAndPrintStrategy(IPatternImplementation patternImplementation)
+        private static void RunAndPrintStrategy(Type patternImplementationType)
         {
-            WriteLine("****" + patternImplementation.GetType().Name + "****");
             try
             {
+                var patternImplementation = (IPatternImplementation) Activator.CreateInstance(patternImplementationType);
+                WriteLine("****" + patternImplementation.GetType().Name + "****");
                 patternImplementation.Run();
             }
             catch (Exception ex)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("\n!!!ERROR!!! in implementation!");
                 Console.WriteLine(ex.Message + "\n");
+                Console.ResetColor();
             }
             
             PrintSeparator();
