@@ -11,7 +11,7 @@ namespace Design_Patterns
             RunAndPrintStrategy(typeof(DecoratorPattern.DecoratorPattern));
             RunAndPrintStrategy(typeof(FactoryPattern.FactoryPattern));
             RunAndPrintStrategy(typeof(ObserverPattern.ObserverPattern));
-            RunAndPrintStrategy(typeof(ChainOfResponsibility.ChainOfResponsibility));
+            RunAndPrintStrategy(typeof(ChainOfResponsibilityPattern.ChainOfResponsibilityPattern));
         }
 
         private static void RunAndPrintStrategy(Type patternImplementationType)
