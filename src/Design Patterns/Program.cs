@@ -1,5 +1,4 @@
 ﻿using System;
-using static System.Console;
 
 namespace Design_Patterns
 {
@@ -12,6 +11,8 @@ namespace Design_Patterns
             RunAndPrintStrategy(typeof(FactoryPattern.FactoryPattern));
             RunAndPrintStrategy(typeof(ObserverPattern.ObserverPattern));
             RunAndPrintStrategy(typeof(ChainOfResponsibilityPattern.ChainOfResponsibilityPattern));
+            RunAndPrintStrategy(typeof(SingletonPattern.SingletonPattern));
+            Console.ReadKey();
         }
 
         private static void RunAndPrintStrategy(Type patternImplementationType)
@@ -19,7 +20,7 @@ namespace Design_Patterns
             try
             {
                 var patternImplementation = (IPatternImplementation) Activator.CreateInstance(patternImplementationType);
-                WriteLine("****" + patternImplementation.GetType().Name + "****");
+                Console.WriteLine("****" + patternImplementation.GetType().Name + "****");
                 patternImplementation.Run();
             }
             catch (Exception ex)
@@ -35,7 +36,7 @@ namespace Design_Patterns
 
         private static void PrintSeparator()
         {
-            WriteLine("***********************************************************");
+            Console.WriteLine("***********************************************************");
         }
     }
 }

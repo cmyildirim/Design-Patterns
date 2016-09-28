@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Design_Patterns.StrategyPattern
+﻿namespace Design_Patterns.StrategyPattern
 {
     public class StrategyPattern : IPatternImplementation
     {

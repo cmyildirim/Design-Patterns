@@ -1,5 +1,5 @@
 ﻿using System;
-using Design_Patterns.ObserverPattern.DotNetImplementation;
+using Design_Patterns.ObserverPattern.SimpleImplementation;
 
 namespace Design_Patterns.ObserverPattern
 {
@@ -19,7 +19,7 @@ namespace Design_Patterns.ObserverPattern
             subject.SubjectState = "XYZ";
 
             Console.WriteLine("\nImplementation using .NET IObserver and IObservable");
-            NetObserver.Run();
+            DotNetImplementation.NetObserver.Run();
         }
     }
 }

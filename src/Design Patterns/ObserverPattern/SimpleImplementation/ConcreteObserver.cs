@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Design_Patterns.ObserverPattern
+namespace Design_Patterns.ObserverPattern.SimpleImplementation
 {
     internal class ConcreteObserver : Observer
     {

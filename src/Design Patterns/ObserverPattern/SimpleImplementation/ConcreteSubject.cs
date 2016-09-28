@@ -1,6 +1,4 @@
-﻿using Design_Patterns.ObserverPattern.SimpleImplementation;
-
-namespace Design_Patterns.ObserverPattern
+﻿namespace Design_Patterns.ObserverPattern.SimpleImplementation
 {
     internal class ConcreteSubject : Subject
     {
