@@ -4,7 +4,7 @@ namespace Design_Patterns.ObserverPattern.DotNetImplementation
 {
     internal class LocationReporter : IObserver<Location>
     {
-        private IDisposable Unsubscriber { get; set; }
+        private IDisposable Subscriber { get; set; }
         private string InstName { get; }
 
         public LocationReporter(string name)
@@ -17,7 +17,7 @@ namespace Design_Patterns.ObserverPattern.DotNetImplementation
         public virtual void Subscribe(IObservable<Location> provider)
         {
             if (provider != null)
-                Unsubscriber = provider.Subscribe(this);
+                Subscriber = provider.Subscribe(this);
         }
 
         public virtual void OnCompleted()
@@ -38,7 +38,7 @@ namespace Design_Patterns.ObserverPattern.DotNetImplementation
 
         public virtual void Unsubscribe()
         {
-            Unsubscriber.Dispose();
+            Subscriber.Dispose();
         }
     }
 }

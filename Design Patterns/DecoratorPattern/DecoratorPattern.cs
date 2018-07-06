@@ -17,11 +17,12 @@ namespace Design_Patterns.DecoratorPattern
             // Make video borrowable, then borrow and display
             Console.WriteLine("\nMaking video borrowable:");
 
-            Borrowable borrowvideo = new Borrowable(video);
-            borrowvideo.BorrowItem("Customer #1");
-            borrowvideo.BorrowItem("Customer #2");
+            Borrowable borrowableVideo = new Borrowable(video);
+            borrowableVideo.BorrowItem("Customer #1");
+            borrowableVideo.BorrowItem("Customer #2");
+            borrowableVideo.ReturnItem("Customer #1");
 
-            borrowvideo.Display();
+            borrowableVideo.Display();
         }
     }
 }

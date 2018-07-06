@@ -19,7 +19,7 @@ namespace Design_Patterns
         {
             try
             {
-                var patternImplementation = (IPatternImplementation) Activator.CreateInstance(patternImplementationType);
+                var patternImplementation = (IPatternImplementation)Activator.CreateInstance(patternImplementationType);
                 Console.WriteLine("****" + patternImplementation.GetType().Name + "****");
                 patternImplementation.Run();
             }
@@ -30,7 +30,7 @@ namespace Design_Patterns
                 Console.WriteLine(ex.Message + "\n");
                 Console.ResetColor();
             }
-            
+
             PrintSeparator();
         }
 

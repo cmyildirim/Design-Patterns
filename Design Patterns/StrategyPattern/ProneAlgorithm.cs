@@ -6,7 +6,7 @@ namespace Design_Patterns.StrategyPattern
     {
         public void Go()
         {
-            Console.WriteLine("Moving very slowly but silently");
+            Console.WriteLine("Moving very slowly and silently");
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Design_Patterns
 {
-    public interface IPatternImplementation
+    internal interface IPatternImplementation
     {
         void Run();
     }

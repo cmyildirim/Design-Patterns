@@ -17,12 +17,14 @@ namespace Design_Patterns.DecoratorPattern
         public void BorrowItem(string name)
         {
             Borrowers.Add(name);
+            Console.WriteLine(name + "borrowed");
             LibraryItem.NumCopies--;
         }
 
         public void ReturnItem(string name)
         {
             Borrowers.Remove(name);
+            Console.WriteLine(name + "returned");
             LibraryItem.NumCopies++;
         }
 
